@@ -161,13 +161,13 @@ export default {
   color: #e9e9e9;
 }
 .note-red {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: red;
-  border-radius: 50%;
-  right: -7px;
-  bottom: 12px;
+      position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #FAAD14;
+    border-radius: 50%;
+    right: -10px;
+    bottom: 30px;
 }
 .top {
   position: absolute;

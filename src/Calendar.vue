@@ -121,6 +121,9 @@ export default {
       cellGroupName: "",
     };
   },
+  computed: {
+
+  },
   watch: {
     defaultDate(val) {
       this.date = moment(val, "YYYY-MM-DD");
@@ -142,6 +145,17 @@ export default {
     },
     isLunar(val) {
       this.$emit("change", this.date, this.lunarDate, val);
+    },
+    customCellsData(val) {
+      // console.log("customCellsData");
+
+      // console.log(val);
+    },
+    customCells(val) {
+      console.log("customCells");
+      this.customCellsData = JSON.parse(JSON.stringify(val));
+      // console.log(val);
+      this.initDays();
     },
   },
   created() {
@@ -258,6 +272,7 @@ export default {
     },
     changeMonth(delta) {
       this.dayOfMonth.add(delta, "months");
+      this.$emit("nextMonth", this.dayOfMonth._d);
       this.initDays();
     },
   },
